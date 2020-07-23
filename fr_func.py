@@ -1,11 +1,11 @@
 import cv2
 
-def face_recog(pil_image):
+def face_recog(image):
 	casc_path = 'models/haarcascade_frontalface_default.xml'
 	faceCascade = cv2.CascadeClassifier(casc_path)
 
-	# Convert RGB to BGR	
-	cv_image = pil_image[:, :, ::-1].copy()
+	# Convert RGB to BGR
+	cv_image = image[:, :, ::-1].copy()
 	# convert to gray scale
 	gray = cv2.cvtColor(cv_image, cv2.COLOR_BGR2GRAY)
 
@@ -20,6 +20,3 @@ def face_recog(pil_image):
 
 	cv_image= cv2.cvtColor(cv_image, cv2.COLOR_RGB2BGR)
 	return cv_image
-
-# cv2.imshow('Faces found', face_recog('people.jpg'))
-# cv2.waitKey(0)
