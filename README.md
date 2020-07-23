@@ -1,3 +1,3 @@
 # Face detection with openCV
 
-https://42229.gradio.app
+https://17781.gradio.app
